@@ -42,8 +42,10 @@ export class TopPanelComponent implements OnInit, OnDestroy {
   ngOnInit(): void { }
 
   selectTab(tab: Tab): void {
+    if (!tab.url) return;
+
     this.selectedTab = tab;
-    tab.url && this.router.navigate([tab.url], { relativeTo: this.route });
+    this.router.navigate([tab.url], { relativeTo: this.route });
   }
   
   goHome(): void {
