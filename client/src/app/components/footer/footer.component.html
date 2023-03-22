@@ -1,0 +1,9 @@
+<section class="footer">
+  <div *ngFor="let item of footer"
+    class="item">
+    <svg-icon *ngIf="item.icon"
+      [key]="item.icon"></svg-icon>
+
+    <span>{{item.txt}}</span>
+  </div>
+</section>

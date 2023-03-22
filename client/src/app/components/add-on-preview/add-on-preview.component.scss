@@ -1,0 +1,43 @@
+.add-on-preview {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 16vw;
+  height: 16vw;
+  border-radius: 0.6rem;
+
+  img {
+    width: 6rem;
+    height: 6rem;
+    margin-block-end: 3rem;
+  }
+
+  .title {
+    font-family: 'montserrat-extra-bold', 'system-ui';
+    font-size: 1.8rem;
+  }
+
+  .circle {
+    display: grid;
+    place-items: center;
+    position: absolute;
+    bottom: 2rem;
+    right: calc(-1.75rem - 2px);
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    transition: 0.4s ease-in-out;
+    cursor: pointer;
+
+    svg-icon {
+      width: 70%;
+      height: 70%;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}

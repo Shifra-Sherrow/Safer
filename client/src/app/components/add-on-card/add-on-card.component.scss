@@ -1,0 +1,94 @@
+.add-on-card {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 43vh;
+  padding: 3rem 3rem 3rem 0;
+  border-radius: 0.6rem;
+
+  &.disabled {
+    background-color: rgb(255 255 255 / 20%);
+    opacity: 0.6;
+  }
+
+  .img-container {
+    display: grid;
+    place-items: center;
+    width: 30%;
+    height: 100%;
+
+    img {
+      width: 10rem;
+      height: 10rem;
+    }
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+
+    .title {
+      display: flex;
+      align-items: center;
+      margin-block-end: 1rem;
+
+      span:first-of-type {
+        font-family: 'montserrat-extra-bold', 'system-ui';
+        font-size: 1.8rem;
+        margin-inline-end: 2rem;
+      }
+
+      span:last-of-type {
+        position: relative;
+        height: 1rem;
+        letter-spacing: 0.1em;
+      }
+    }
+
+    .description {
+      margin-block-end: 3rem;
+      line-height: 1.4;
+    }
+
+    .advantages {
+      margin-block-start: auto;
+
+      .item {
+        display: flex;
+        align-items: center;
+        height: 2.5rem;
+
+        .point {
+          width: 4px;
+          height: 4px;
+          margin-inline-end: 1rem;
+          background-color: var(--white);
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+
+  .circle {
+    display: grid;
+    place-items: center;
+    position: absolute;
+    bottom: 2rem;
+    right: calc(-1.75rem - 2px);
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    transition: 0.4s ease-in-out;
+    cursor: pointer;
+
+    svg-icon {
+      width: 70%;
+      height: 70%;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}

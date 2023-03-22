@@ -1,0 +1,16 @@
+<section class="top-panel">
+  <svg-icon key="logoIcon"
+    (click)="goHome()"></svg-icon>
+
+  <button *ngFor="let tab of tabs"
+    [class.selected]="tab.value === selectedTab?.value"
+    [class.disabled]="tab.disabled"
+    (click)="selectTab(tab)">
+    <div class="container">
+      <span>{{tab.value}}</span>
+  
+      <svg-icon *ngIf="tab.isPremium"
+        key="premium"></svg-icon>
+    </div>
+  </button>
+</section>

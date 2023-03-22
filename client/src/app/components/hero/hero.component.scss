@@ -1,0 +1,36 @@
+.hero {
+  position: relative;
+  height: 80vh;
+  
+  .bgc {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url(/assets/png/hero.png) center right / cover;
+    
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(rgba(37, 30, 56, 0.23) 100%, rgba(35, 29, 53, 0.21) 52%);
+    }
+  }
+  
+  .txt {
+    position: absolute;
+    top: 20vh;
+    left: 20vw;
+    
+    > div:first-of-type {
+      width: 25%;
+      margin-block: 5rem 3rem;
+      font-family: 'montserrat-extra-bold', 'system-ui';
+      font-size: 3.5rem;
+    }
+    
+    > div:not(:first-of-type) {
+      line-height: 2rem;
+    }
+  }
+}

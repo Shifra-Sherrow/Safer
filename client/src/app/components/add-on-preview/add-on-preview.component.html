@@ -1,0 +1,12 @@
+<section class="add-on-preview"
+  [style.border]="'4px solid ' + addOn.color">
+  <img [src]="'/assets/png/' + addOn.name?.toLowerCase() + '.png'" />
+
+  <div class="title">{{addOn.name}}</div>
+
+  <div class="circle"
+    [style.background-color]="addOn.color"
+    (click)="removeAddOn(addOn.id)">
+    <svg-icon key="minus"></svg-icon>
+  </div>
+</section>

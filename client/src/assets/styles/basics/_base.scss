@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--darkBlue);
+}
+
+html {
+  font-family: 'montserrat-regular', 'system-ui';
+  font-size: 16px;
+  color: var(--white);
+}
+
+input:focus,
+select:focus,
+button:focus {
+  border: none;
+  outline: none;
+}
+
+button,
+label,
+input,
+select,
+option {
+  cursor: pointer;
+}
+
+button {
+  font-family: 'montserrat-regular', 'system-ui';
+  font-size: 1rem;
+  color: var(--white);
+  border: none;
+  outline: none;
+}
+
+input {
+  font-family: 'montserrat-regular', 'system-ui';
+  color: var(--white);
+}
+
+a {
+  text-decoration: none;
+}

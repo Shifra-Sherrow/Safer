@@ -1,0 +1,20 @@
+.app {
+  position: relative;
+  height: 100vh;
+  overflow: scroll;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+
+  > main {
+    position: relative;
+    min-height: calc(100% - 5.5rem - 1px);
+
+    .my-add-ons, .add-on-store {
+      width: 60vw;
+      padding-block-start: 20vh;
+      margin: 0 0 7rem 20vw;
+    }
+  }
+}

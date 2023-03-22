@@ -1,0 +1,8 @@
+<section class="my-add-ons"
+  [class.one-line]="addOns.length <= 3">
+  <add-on-preview *ngFor="let addOn of addOns"
+    [addOn]="addOn"></add-on-preview>
+
+  <div *ngIf="!addOns.length"
+    class="no-add-ons">{{'NO_ADD_ONS' | translate}}</div>
+</section>

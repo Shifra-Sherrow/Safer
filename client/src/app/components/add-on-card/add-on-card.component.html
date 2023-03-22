@@ -1,0 +1,31 @@
+<section class="add-on-card"
+  [style.border]="'4px solid ' + addOn.color"
+  [class.disabled]="addOn.disabled">
+  <div class="img-container">
+    <img [src]="'/assets/png/' + addOn.name?.toLowerCase() + '.png'" />
+  </div>
+
+  <div class="info">
+    <div class="title">
+      <span>{{addOn.name}}</span>
+      <span>| {{addOn.price}}$</span>
+    </div>
+
+    <div class="description">{{addOn.description}}</div>
+
+    <div class="advantages">
+      <div *ngFor="let item of addOn.advantages"
+        class="item">
+        <div class="point"></div>
+        <span>{{item}}</span>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="!addOn.disabled"
+    class="circle"
+    [style.background-color]="addOn.color"
+    (click)="buyAddOn(addOn.id)">
+    <svg-icon key="plus"></svg-icon>
+  </div>
+</section>

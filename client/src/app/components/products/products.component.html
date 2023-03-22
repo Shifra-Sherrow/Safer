@@ -1,0 +1,19 @@
+<section class="products">
+  <header>
+    <span>{{'WELCOME_TO' | translate}}</span>
+    <svg-icon key="logoTxt"></svg-icon>
+  </header>
+
+  <div class="about">{{'ABOUT' | translate}}</div>
+
+  <main>
+    <div *ngFor="let product of products"
+      class="product"
+      [style.background-color]="product.bgc">
+      <div class="title">{{product.title}}</div>
+      <div class="details">{{product.details}}</div>
+
+      <div class="btn">{{'FIND_OUT_MORE' | translate}}</div>
+    </div>
+  </main>
+</section>
